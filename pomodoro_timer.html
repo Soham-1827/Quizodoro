@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+      body {
+        background-image: url("Custom\ dimensions\ 1920x1080\ px.gif");
+        background-size: cover;
+      }
+      #timer-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f8f9fa; /* White background for the timer */
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow */
+      }
+      #timer-display {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      .btn {
+        width: 100%; /* Full width buttons */
+        margin-top: 10px;
+      }
+      #upload-container {
+        margin: auto;
+        width: 50%;
+        padding: 10px 200px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <div id="timer-container" class="text-center">
+      <h1 class="my-4">Pomodoro Timer</h1>
+      <div id="timer-display" class="mb-3">00:00</div>
+      <div class="form-group">
+        <label for="duration-input">Duration (minutes):</label>
+        <input type="number" id="duration-input" class="form-control" min="1" value="" />
+      </div>
+      <button id="start-btn" class="btn btn-primary">Start</button>
+      <button id="stop-btn" class="btn btn-danger">Stop</button>
+      <button id="pause-btn" class="btn btn-secondary">Pause</button>
+    </div>
+    <div id="upload-container" class="text-center mt-4">
+      <!-- File upload form -->
+      <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" id="file-input" name="file" class="form-control-file" accept="application/pdf" />
+        <button type="submit" class="btn btn-success">Upload</button>
+      </form>
+    </div>
+
+    <!-- Pass Google API key to JavaScript -->
+
+
+    <!-- Your JavaScript code -->
+    <script src="script.js">
+        google_api_key = "AIzaSyCLO0UcR8lbH4EH24fBQ28dvuTNzs6VO-Q";
+    </script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/popper.min.js"></script>
+</body>
+</html>
